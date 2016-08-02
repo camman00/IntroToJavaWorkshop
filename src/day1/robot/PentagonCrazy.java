@@ -9,27 +9,53 @@ import org.jointheleague.graphical.robot.Robot;
 public class PentagonCrazy {
 
 	private void makePrettyThings() {
-		// 1. Create a new Robot
+		// 1. Create a new Robot done
+		Robot cam = new Robot();
 
-		// 3. Put the robot's pen down
+		// 3. Put the robot's pen down done
+		cam.hide();
+		cam.penDown();
 
-		// 8. Make the robot go at maximum speed (10)
+		// 8. Make the robot go at maximum speed (10) done
+		cam.setSpeed(13);
 
-		// 9. Set the pen to a color that you like for the shape
+		// 9. Set the pen to a color that you like for the shape done
+		cam.setPenColor(Color.MAGENTA);
 
-		// 4. Make a variable for the number of sides you want (can’t test this one)
+		// 4. Make a variable for the number of sides you want (can’t test this one) done
+		int sides = 5;
 
-		// 5. Make a variable for the angle you want the robot to turn. Hint: you can divide in Java using "/". Can’t test until step 6.
+		// 5. Make a variable for the angle you want the robot to turn. Hint: you can divide in Java using "/". Can’t test until step 6. done
+		int angle = 360/5;
 
 		// 7. Do steps #2 to #11, 200 times. When this is done you should see a pentagon.
+		for (int i = 0; i < 200; i++) {
+			if (i % 3 == 0) {
+				cam.setPenColor(Color.YELLOW);
+			}
+			else if (i % 4 == 0) {
+				cam.setPenColor(Color.ORANGE);
+			}
+			else if (i % 5 == 0) {
+				cam.setPenColor(Color.RED);
+			}
+			else {
+				cam.setPenColor(Color.BLACK);
+			}
+			
+		
 
-			// 2. Move the robot 200 pixels
+			// 2. Move the robot 200 pixels done
+		cam.move(i);
 	
-			// 10. Make the robot move "i" pixels instead of 200 (don’t need new line of code for this, just change previous one)
+			// 10. Make the robot move "i" pixels instead of 200 (don’t need new line of code for this, just change previous one) done
 	
-			// 6. Turn the robot the amount in your angle variable
+			// 6. Turn the robot the amount in your angle variable done
+		cam.turn(angle);
 	
-			// 11. Turn the robot one more degree
+			// 11. Turn the robot one more degree done
+		cam.turn(1);
+		}
 
 	}
 
