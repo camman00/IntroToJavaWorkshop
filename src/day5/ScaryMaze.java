@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import javafx.scene.input.MouseButton;
+
 public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 	Robot cam = new Robot();
 	BufferedImage maze;
@@ -38,6 +40,7 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
+		
 		int mouseX = e.getX();
 		int mouseY = e.getY();
 		int mouseColor = maze.getRGB(mouseX, mouseY);
